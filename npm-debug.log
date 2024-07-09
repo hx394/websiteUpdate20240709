@@ -1,0 +1,459 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/dh/nodejs/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'eslint' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 silly cache add args [ 'eslint', null ]
+5 verbose cache add spec eslint
+6 silly cache add parsed spec { raw: 'eslint',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'eslint',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed eslint@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'eslint', range: '*', hasData: false }
+11 silly mapToRegistry name eslint
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/eslint
+15 verbose addNameRange registry:https://registry.npmjs.org/eslint not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/eslint
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 16:03:50
+19 verbose request id 654aa8542ebc58eb
+20 verbose etag W/"e3922bd1f79bd300f99eccf32661b099"
+21 verbose lastModified Thu, 03 Jan 2019 19:21:21 GMT
+22 http request GET https://registry.npmjs.org/eslint
+23 http 200 https://registry.npmjs.org/eslint
+24 silly get cb [ 200,
+24 silly get   { date: 'Sun, 06 Jan 2019 00:03:50 GMT',
+24 silly get     'content-type': 'application/json',
+24 silly get     'transfer-encoding': 'chunked',
+24 silly get     connection: 'keep-alive',
+24 silly get     'set-cookie': [ '__cfduid=dcbc741a7f363da43f6f775aff8901b4e1546733030; expires=Mon, 06-Jan-20 00:03:50 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+24 silly get     'cf-cache-status': 'HIT',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'cf-ray': '4949ec7ffbc09fea-IAD',
+24 silly get     etag: 'W/"452886b96cdf985c7017a6e56f2efd3f"',
+24 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+24 silly get     'last-modified': 'Fri, 04 Jan 2019 20:59:31 GMT',
+24 silly get     vary: 'accept-encoding, accept',
+24 silly get     'x-amz-meta-rev': '686-b2419cff5d0db163374825b03744b9b6',
+24 silly get     server: 'cloudflare',
+24 silly get     'content-encoding': 'gzip' } ]
+25 verbose get saving eslint to /home/hongzhenxu96/.npm/registry.npmjs.org/eslint/.cache.json
+26 silly addNameRange number 2 { name: 'eslint', range: '*', hasData: true }
+27 silly addNameRange versions [ 'eslint',
+27 silly addNameRange   [ '0.0.4',
+27 silly addNameRange     '0.0.5',
+27 silly addNameRange     '0.0.6',
+27 silly addNameRange     '0.0.7',
+27 silly addNameRange     '0.1.0-dev',
+27 silly addNameRange     '0.1.0',
+27 silly addNameRange     '0.1.1',
+27 silly addNameRange     '0.1.2',
+27 silly addNameRange     '0.1.3',
+27 silly addNameRange     '0.1.4',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '0.3.0',
+27 silly addNameRange     '0.4.0',
+27 silly addNameRange     '0.4.1',
+27 silly addNameRange     '0.4.2',
+27 silly addNameRange     '0.4.3',
+27 silly addNameRange     '0.4.4',
+27 silly addNameRange     '0.4.5',
+27 silly addNameRange     '0.5.0',
+27 silly addNameRange     '0.5.1',
+27 silly addNameRange     '0.6.0',
+27 silly addNameRange     '0.6.1',
+27 silly addNameRange     '0.6.2',
+27 silly addNameRange     '0.7.1',
+27 silly addNameRange     '0.7.2',
+27 silly addNameRange     '0.7.3',
+27 silly addNameRange     '0.7.4',
+27 silly addNameRange     '0.8.0',
+27 silly addNameRange     '0.8.1',
+27 silly addNameRange     '0.8.2',
+27 silly addNameRange     '0.9.0',
+27 silly addNameRange     '0.9.1',
+27 silly addNameRange     '0.9.2',
+27 silly addNameRange     '0.10.0-alpha',
+27 silly addNameRange     '0.10.0-alpha.1',
+27 silly addNameRange     '0.10.0-alpha.2',
+27 silly addNameRange     '0.10.0',
+27 silly addNameRange     '0.11.0-alpha.0',
+27 silly addNameRange     '0.10.1',
+27 silly addNameRange     '0.10.2',
+27 silly addNameRange     '0.11.0',
+27 silly addNameRange     '0.12.0',
+27 silly addNameRange     '0.13.0',
+27 silly addNameRange     '0.14.0',
+27 silly addNameRange     '0.14.1',
+27 silly addNameRange     '0.15.0',
+27 silly addNameRange     '0.15.1',
+27 silly addNameRange     '0.16.0',
+27 silly addNameRange     '0.16.1',
+27 silly addNameRange     '0.16.2',
+27 silly addNameRange     '0.17.0',
+27 silly addNameRange     '0.17.1',
+27 silly addNameRange     '0.18.0',
+27 silly addNameRange     '0.19.0',
+27 silly addNameRange     '0.20.0',
+27 silly addNameRange     '0.21.0',
+27 silly addNameRange     '0.21.1',
+27 silly addNameRange     '0.21.2',
+27 silly addNameRange     '0.22.0',
+27 silly addNameRange     '0.22.1',
+27 silly addNameRange     '0.23.0',
+27 silly addNameRange     '0.24.0',
+27 silly addNameRange     '0.24.1',
+27 silly addNameRange     '1.0.0-rc-1',
+27 silly addNameRange     '1.0.0-rc-2',
+27 silly addNameRange     '1.0.0-rc-3',
+27 silly addNameRange     '1.0.0',
+27 silly addNameRange     '1.1.0',
+27 silly addNameRange     '1.2.0',
+27 silly addNameRange     '1.2.1',
+27 silly addNameRange     '1.3.0',
+27 silly addNameRange     '1.3.1',
+27 silly addNameRange     '1.4.0',
+27 silly addNameRange     '1.4.1',
+27 silly addNameRange     '1.4.2',
+27 silly addNameRange     '1.4.3',
+27 silly addNameRange     '1.5.0',
+27 silly addNameRange     '1.5.1',
+27 silly addNameRange     '1.6.0',
+27 silly addNameRange     '1.7.0',
+27 silly addNameRange     '1.7.1',
+27 silly addNameRange     '1.7.2',
+27 silly addNameRange     '1.7.3',
+27 silly addNameRange     '1.8.0',
+27 silly addNameRange     '1.9.0',
+27 silly addNameRange     '1.10.0',
+27 silly addNameRange     '1.10.1',
+27 silly addNameRange     '1.10.2',
+27 silly addNameRange     '1.10.3',
+27 silly addNameRange     '2.0.0-alpha-1',
+27 silly addNameRange     '2.0.0-alpha-2',
+27 silly addNameRange     '2.0.0-beta.1',
+27 silly addNameRange     '2.0.0-beta.2',
+27 silly addNameRange     '2.0.0-beta.3',
+27 silly addNameRange     '2.0.0-rc.0',
+27 silly addNameRange     '2.0.0-rc.1',
+27 silly addNameRange     '2.0.0',
+27 silly addNameRange     '2.1.0',
+27 silly addNameRange     '2.2.0',
+27 silly addNameRange     '2.3.0',
+27 silly addNameRange     '2.4.0',
+27 silly addNameRange     '2.5.0',
+27 silly addNameRange     '2.5.1',
+27 silly addNameRange     '2.5.2',
+27 silly addNameRange     '2.5.3',
+27 silly addNameRange     '2.6.0',
+27 silly addNameRange     '2.7.0',
+27 silly addNameRange     '2.8.0',
+27 silly addNameRange     '2.9.0',
+27 silly addNameRange     '2.10.0',
+27 silly addNameRange     '2.10.1',
+27 silly addNameRange     '2.10.2',
+27 silly addNameRange     '2.11.0',
+27 silly addNameRange     '2.11.1',
+27 silly addNameRange     '2.12.0',
+27 silly addNameRange     '2.13.0',
+27 silly addNameRange     '2.13.1',
+27 silly addNameRange     '3.0.0',
+27 silly addNameRange     '3.0.1',
+27 silly addNameRange     '3.1.0',
+27 silly addNameRange     '3.1.1',
+27 silly addNameRange     '3.2.0',
+27 silly addNameRange     '3.2.1',
+27 silly addNameRange     '3.2.2',
+27 silly addNameRange     '3.3.0',
+27 silly addNameRange     '3.3.1',
+27 silly addNameRange     '3.4.0',
+27 silly addNameRange     '3.5.0',
+27 silly addNameRange     '3.6.0',
+27 silly addNameRange     '3.6.1',
+27 silly addNameRange     '3.7.0',
+27 silly addNameRange     '3.7.1',
+27 silly addNameRange     '3.8.0',
+27 silly addNameRange     '3.8.1',
+27 silly addNameRange     '3.9.0',
+27 silly addNameRange     '3.9.1',
+27 silly addNameRange     '3.10.0',
+27 silly addNameRange     '3.10.1',
+27 silly addNameRange     '3.10.2',
+27 silly addNameRange     '3.11.0',
+27 silly addNameRange     '3.11.1',
+27 silly addNameRange     '3.12.0',
+27 silly addNameRange     '3.12.1',
+27 silly addNameRange     '3.12.2',
+27 silly addNameRange     '3.13.0',
+27 silly addNameRange     '3.13.1',
+27 silly addNameRange     '3.14.0',
+27 silly addNameRange     '3.14.1',
+27 silly addNameRange     '3.15.0',
+27 silly addNameRange     '3.16.0',
+27 silly addNameRange     '3.16.1',
+27 silly addNameRange     '3.17.0',
+27 silly addNameRange     '3.17.1',
+27 silly addNameRange     '3.18.0',
+27 silly addNameRange     '3.19.0',
+27 silly addNameRange     '4.0.0-alpha.0',
+27 silly addNameRange     '4.0.0-alpha.1',
+27 silly addNameRange     '4.0.0-alpha.2',
+27 silly addNameRange     '4.0.0-beta.0',
+27 silly addNameRange     '4.0.0-rc.0',
+27 silly addNameRange     '4.0.0',
+27 silly addNameRange     '4.1.0',
+27 silly addNameRange     '4.1.1',
+27 silly addNameRange     '4.2.0',
+27 silly addNameRange     '4.3.0',
+27 silly addNameRange     '4.4.0',
+27 silly addNameRange     '4.4.1',
+27 silly addNameRange     '4.5.0',
+27 silly addNameRange     '4.6.0',
+27 silly addNameRange     '4.6.1',
+27 silly addNameRange     '4.7.0',
+27 silly addNameRange     '4.7.1',
+27 silly addNameRange     '4.7.2',
+27 silly addNameRange     '4.8.0',
+27 silly addNameRange     '4.9.0',
+27 silly addNameRange     '4.10.0',
+27 silly addNameRange     '4.11.0',
+27 silly addNameRange     '4.12.0',
+27 silly addNameRange     '4.12.1',
+27 silly addNameRange     '4.13.0',
+27 silly addNameRange     '4.13.1',
+27 silly addNameRange     '4.14.0',
+27 silly addNameRange     '4.15.0',
+27 silly addNameRange     '4.16.0',
+27 silly addNameRange     '4.17.0',
+27 silly addNameRange     '4.18.0',
+27 silly addNameRange     '4.18.1',
+27 silly addNameRange     '4.18.2',
+27 silly addNameRange     '4.19.0',
+27 silly addNameRange     '4.19.1',
+27 silly addNameRange     '5.0.0-alpha.0',
+27 silly addNameRange     '5.0.0-alpha.1',
+27 silly addNameRange     '5.0.0-alpha.2',
+27 silly addNameRange     '5.0.0-alpha.3',
+27 silly addNameRange     '5.0.0-alpha.4',
+27 silly addNameRange     '5.0.0-rc.0',
+27 silly addNameRange     '5.0.0',
+27 silly addNameRange     '5.0.1',
+27 silly addNameRange     '5.1.0',
+27 silly addNameRange     '5.2.0',
+27 silly addNameRange     '5.3.0',
+27 silly addNameRange     '5.4.0',
+27 silly addNameRange     '5.5.0',
+27 silly addNameRange     '5.6.0',
+27 silly addNameRange     '5.6.1',
+27 silly addNameRange     '5.7.0',
+27 silly addNameRange     '5.8.0',
+27 silly addNameRange     '5.9.0',
+27 silly addNameRange     '5.10.0',
+27 silly addNameRange     '5.11.0',
+27 silly addNameRange     '5.11.1',
+27 silly addNameRange     '5.12.0' ] ]
+28 verbose addNamed eslint@5.12.0
+29 silly addNamed semver.valid 5.12.0
+30 silly addNamed semver.validRange 5.12.0
+31 silly mapToRegistry name eslint
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/eslint
+35 verbose addRemoteTarball https://registry.npmjs.org/eslint/-/eslint-5.12.0.tgz not in flight; adding
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/eslint/-/eslint-5.12.0.tgz',
+36 verbose addRemoteTarball   'fab3b908f60c52671fb14e996a450b96c743c859' ]
+37 info retry fetch attempt 1 at 16:03:50
+38 info attempt registry request try #1 at 16:03:50
+39 http fetch GET https://registry.npmjs.org/eslint/-/eslint-5.12.0.tgz
+40 http fetch 200 https://registry.npmjs.org/eslint/-/eslint-5.12.0.tgz
+41 silly fetchAndShaCheck shasum fab3b908f60c52671fb14e996a450b96c743c859
+42 verbose addTmpTarball /tmp/npm-16843-87580190/registry.npmjs.org/eslint/-/eslint-5.12.0.tgz not in flight; adding
+43 verbose addTmpTarball already have metadata; skipping unpack for eslint@5.12.0
+44 silly cache afterAdd eslint@5.12.0
+45 verbose afterAdd /home/hongzhenxu96/.npm/eslint/5.12.0/package/package.json not in flight; writing
+46 verbose afterAdd /home/hongzhenxu96/.npm/eslint/5.12.0/package/package.json written
+47 silly install resolved [ { name: 'eslint',
+47 silly install resolved     version: '5.12.0',
+47 silly install resolved     author:
+47 silly install resolved      { name: 'Nicholas C. Zakas',
+47 silly install resolved        email: 'nicholas+npm@nczconsulting.com' },
+47 silly install resolved     description: 'An AST-based pattern checker for JavaScript.',
+47 silly install resolved     bin: { eslint: './bin/eslint.js' },
+47 silly install resolved     main: './lib/api.js',
+47 silly install resolved     scripts:
+47 silly install resolved      { test: 'node Makefile.js test',
+47 silly install resolved        lint: 'node Makefile.js lint',
+47 silly install resolved        fuzz: 'node Makefile.js fuzz',
+47 silly install resolved        'generate-release': 'node Makefile.js generateRelease',
+47 silly install resolved        'generate-alpharelease': 'node Makefile.js generatePrerelease -- alpha',
+47 silly install resolved        'generate-betarelease': 'node Makefile.js generatePrerelease -- beta',
+47 silly install resolved        'generate-rcrelease': 'node Makefile.js generatePrerelease -- rc',
+47 silly install resolved        'publish-release': 'node Makefile.js publishRelease',
+47 silly install resolved        docs: 'node Makefile.js docs',
+47 silly install resolved        gensite: 'node Makefile.js gensite',
+47 silly install resolved        browserify: 'node Makefile.js browserify',
+47 silly install resolved        perf: 'node Makefile.js perf',
+47 silly install resolved        profile: 'beefy tests/bench/bench.js --open -- -t brfs -t ./tests/bench/xform-rules.js -r espree',
+47 silly install resolved        coveralls: 'cat ./coverage/lcov.info | coveralls' },
+47 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/eslint/eslint.git' },
+47 silly install resolved     homepage: 'https://eslint.org',
+47 silly install resolved     bugs: { url: 'https://github.com/eslint/eslint/issues/' },
+47 silly install resolved     dependencies:
+47 silly install resolved      { '@babel/code-frame': '^7.0.0',
+47 silly install resolved        ajv: '^6.5.3',
+47 silly install resolved        chalk: '^2.1.0',
+47 silly install resolved        'cross-spawn': '^6.0.5',
+47 silly install resolved        debug: '^4.0.1',
+47 silly install resolved        doctrine: '^2.1.0',
+47 silly install resolved        'eslint-scope': '^4.0.0',
+47 silly install resolved        'eslint-utils': '^1.3.1',
+47 silly install resolved        'eslint-visitor-keys': '^1.0.0',
+47 silly install resolved        espree: '^5.0.0',
+47 silly install resolved        esquery: '^1.0.1',
+47 silly install resolved        esutils: '^2.0.2',
+47 silly install resolved        'file-entry-cache': '^2.0.0',
+47 silly install resolved        'functional-red-black-tree': '^1.0.1',
+47 silly install resolved        glob: '^7.1.2',
+47 silly install resolved        globals: '^11.7.0',
+47 silly install resolved        ignore: '^4.0.6',
+47 silly install resolved        'import-fresh': '^3.0.0',
+47 silly install resolved        imurmurhash: '^0.1.4',
+47 silly install resolved        inquirer: '^6.1.0',
+47 silly install resolved        'js-yaml': '^3.12.0',
+47 silly install resolved        'json-stable-stringify-without-jsonify': '^1.0.1',
+47 silly install resolved        levn: '^0.3.0',
+47 silly install resolved        lodash: '^4.17.5',
+47 silly install resolved        minimatch: '^3.0.4',
+47 silly install resolved        mkdirp: '^0.5.1',
+47 silly install resolved        'natural-compare': '^1.4.0',
+47 silly install resolved        optionator: '^0.8.2',
+47 silly install resolved        'path-is-inside': '^1.0.2',
+47 silly install resolved        pluralize: '^7.0.0',
+47 silly install resolved        progress: '^2.0.0',
+47 silly install resolved        regexpp: '^2.0.1',
+47 silly install resolved        semver: '^5.5.1',
+47 silly install resolved        'strip-ansi': '^4.0.0',
+47 silly install resolved        'strip-json-comments': '^2.0.1',
+47 silly install resolved        table: '^5.0.2',
+47 silly install resolved        'text-table': '^0.2.0' },
+47 silly install resolved     devDependencies:
+47 silly install resolved      { 'babel-core': '^6.26.3',
+47 silly install resolved        'babel-polyfill': '^6.26.0',
+47 silly install resolved        'babel-preset-es2015': '^6.24.1',
+47 silly install resolved        babelify: '^8.0.0',
+47 silly install resolved        beefy: '^2.1.8',
+47 silly install resolved        brfs: '^2.0.0',
+47 silly install resolved        browserify: '^16.2.2',
+47 silly install resolved        chai: '^4.0.1',
+47 silly install resolved        cheerio: '^0.22.0',
+47 silly install resolved        coveralls: '^3.0.1',
+47 silly install resolved        dateformat: '^3.0.3',
+47 silly install resolved        ejs: '^2.6.1',
+47 silly install resolved        'eslint-plugin-eslint-plugin': '^2.0.1',
+47 silly install resolved        'eslint-plugin-node': '^8.0.0',
+47 silly install resolved        'eslint-plugin-rulesdir': '^0.1.0',
+47 silly install resolved        'eslint-release': '^1.2.0',
+47 silly install resolved        'eslint-rule-composer': '^0.3.0',
+47 silly install resolved        eslump: '^1.6.2',
+47 silly install resolved        esprima: '^4.0.1',
+47 silly install resolved        istanbul: '^0.4.5',
+47 silly install resolved        jsdoc: '^3.5.5',
+47 silly install resolved        karma: '^3.0.0',
+47 silly install resolved        'karma-babel-preprocessor': '^7.0.0',
+47 silly install resolved        'karma-chrome-launcher': '^2.2.0',
+47 silly install resolved        'karma-mocha': '^1.3.0',
+47 silly install resolved        'karma-mocha-reporter': '^2.2.3',
+47 silly install resolved        leche: '^2.2.3',
+47 silly install resolved        'load-perf': '^0.2.0',
+47 silly install resolved        markdownlint: '^0.11.0',
+47 silly install resolved        mocha: '^5.0.5',
+47 silly install resolved        'mock-fs': '^4.6.0',
+47 silly install resolved        'npm-license': '^0.3.3',
+47 silly install resolved        proxyquire: '^2.0.1',
+47 silly install resolved        puppeteer: '^1.9.0',
+47 silly install resolved        shelljs: '^0.8.2',
+47 silly install resolved        sinon: '^3.3.0',
+47 silly install resolved        temp: '^0.8.3',
+47 silly install resolved        through: '^2.3.8' },
+47 silly install resolved     keywords: [ 'ast', 'lint', 'javascript', 'ecmascript', 'espree' ],
+47 silly install resolved     license: 'MIT',
+47 silly install resolved     engines: { node: '^6.14.0 || ^8.10.0 || >=9.10.0' },
+47 silly install resolved     gitHead: '5ac9b630240ff351d8682baf47fe79dd76fa42e4',
+47 silly install resolved     _id: 'eslint@5.12.0',
+47 silly install resolved     _npmVersion: '6.4.1',
+47 silly install resolved     _nodeVersion: '10.14.0',
+47 silly install resolved     _npmUser: { name: 'eslint', email: 'nicholas+eslint@nczconsulting.com' },
+47 silly install resolved     dist:
+47 silly install resolved      { integrity: 'sha512-LntwyPxtOHrsJdcSwyQKVtHofPHdv+4+mFwEe91r2V13vqpM8yLr7b1sW+Oo/yheOPkWYsYlYJCkzlFAt8KV7g==',
+47 silly install resolved        shasum: 'fab3b908f60c52671fb14e996a450b96c743c859',
+47 silly install resolved        tarball: 'https://registry.npmjs.org/eslint/-/eslint-5.12.0.tgz',
+47 silly install resolved        fileCount: 371,
+47 silly install resolved        unpackedSize: 2595311,
+47 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcL8kwCRA9TVsSAnZWagAAXRIP/j4v8B9wM8zn8LrYeR82\noqEuj+bSWw5OfgPGKMYEU5AnyropB+23BCN0A7MwEcNIbk/x1/Mn31S+Bpy7\n7SCwGalbKHfSAJ9v3Wekw0+ySeihTV0axalqP2LkTwNkUGTy4Ip5wk3bJP7P\nZTmh4MCUO8Uj+hyOMWNrshqUE84zaW3p1WouBj8RZ2c5n9pkEE3udnoXJ+PV\n+l/Vj9Fs6+t2Q4jplE1jlp7DsgVU6rhmekjyZcEK87Z+faDgYn38tOEkL48f\ngbiTmQD8x7IoP+vonvCu8Zql1Y0KdsasLVdsAyPaAIH5flX4OtzyAHNdm3Id\nMuPXpBpCDSqK0WF1E7Hww38IzUnA8L4up+fxxZ8oTDXSZt6SJyIfx9LzymvT\ngcBgfqzepfnaNsnm+OAOx7piK1+QmyAIUd6NwuFLUKakMxxi3YFpz6yyZ4Ne\nwe1Nr83Vj8VeO9OFtvniUBImy7uoRzhKqZY6UNkoiTs7j5o7DwFX2Kw+0TEU\nc2up6WYFUgZGTDVPPkkFPB6639e4vovl7s0pPWOnIKS79yRjVtSTEps+wUBZ\nrhStSzLB3pQu1r+G0C6/yn/9LUtNB8qXAs5lIsY0w0IIUXzRvMqNkfLzI1cC\n3mQrLj5KyMFqMAmEJts2AVMkJHbdiYKaS7QYAoxhTtyjEE37h27tJcr7BtWW\n3IVk\r\n=PdG3\r\n-----END PGP SIGNATURE-----\r\n' },
+47 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+47 silly install resolved     directories: {},
+47 silly install resolved     _npmOperationalInternal:
+47 silly install resolved      { host: 's3://npm-registry-packages',
+47 silly install resolved        tmp: 'tmp/eslint_5.12.0_1546635567465_0.9777359712745497' },
+47 silly install resolved     _hasShrinkwrap: false,
+47 silly install resolved     _shasum: 'fab3b908f60c52671fb14e996a450b96c743c859',
+47 silly install resolved     _resolved: 'https://registry.npmjs.org/eslint/-/eslint-5.12.0.tgz',
+47 silly install resolved     _from: 'eslint@*' } ]
+48 info install eslint@5.12.0 into /usr/local/dh/nodejs/lib
+49 info installOne eslint@5.12.0
+50 verbose installOne of eslint to /usr/local/dh/nodejs/lib not in flight; installing
+51 verbose lock using /home/hongzhenxu96/.npm/_locks/eslint-b9cb1f665d4dbb01.lock for /usr/local/dh/nodejs/lib/node_modules/eslint
+52 warn engine eslint@5.12.0: wanted: {"node":"^6.14.0 || ^8.10.0 || >=9.10.0"} (current: {"node":"0.12.0","npm":"2.5.1"})
+53 silly install write writing eslint 5.12.0 to /usr/local/dh/nodejs/lib/node_modules/eslint
+54 silly cache addNamed cb eslint@5.12.0
+55 verbose unbuild lib/node_modules/eslint
+56 verbose gentlyRm vacuuming /usr/local/dh/nodejs/lib/node_modules/eslint
+57 verbose tar unpack /home/hongzhenxu96/.npm/eslint/5.12.0/package.tgz
+58 verbose tar unpacking to /usr/local/dh/nodejs/lib/node_modules/eslint
+59 verbose gentlyRm vacuuming /usr/local/dh/nodejs/lib/node_modules/eslint
+60 silly gunzTarPerm modes [ '775', '664' ]
+61 error tar.unpack untar error /home/hongzhenxu96/.npm/eslint/5.12.0/package.tgz
+62 verbose unlock done using /home/hongzhenxu96/.npm/_locks/eslint-b9cb1f665d4dbb01.lock for /usr/local/dh/nodejs/lib/node_modules/eslint
+63 verbose fstream_path /usr/local/dh/nodejs/lib/node_modules/eslint
+64 verbose fstream_type Directory
+65 verbose fstream_class DirWriter
+66 verbose stack Error: EACCES, mkdir '/usr/local/dh/nodejs/lib/node_modules/eslint'
+66 verbose stack     at Error (native)
+67 verbose fstream_stack /usr/local/dh/nodejs/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+67 verbose fstream_stack /usr/local/dh/nodejs/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+67 verbose fstream_stack FSReqWrap.oncomplete (fs.js:99:15)
+68 verbose cwd /home/hongzhenxu96/AIT-final-project
+69 error Linux 3.14.52-vs2.3.6.15-1
+70 error argv "/usr/local/dh/nodejs/bin/node" "/usr/bin/npm" "install" "-g" "eslint"
+71 error node v0.12.0
+72 error npm  v2.5.1
+73 error path /usr/local/dh/nodejs/lib/node_modules/eslint
+74 error code EACCES
+75 error errno -13
+76 error Error: EACCES, mkdir '/usr/local/dh/nodejs/lib/node_modules/eslint'
+76 error     at Error (native)
+76 error  { [Error: EACCES, mkdir '/usr/local/dh/nodejs/lib/node_modules/eslint']
+76 error   errno: -13,
+76 error   code: 'EACCES',
+76 error   path: '/usr/local/dh/nodejs/lib/node_modules/eslint',
+76 error   fstream_type: 'Directory',
+76 error   fstream_path: '/usr/local/dh/nodejs/lib/node_modules/eslint',
+76 error   fstream_class: 'DirWriter',
+76 error   fstream_stack:
+76 error    [ '/usr/local/dh/nodejs/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+76 error      '/usr/local/dh/nodejs/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+76 error      'FSReqWrap.oncomplete (fs.js:99:15)' ] }
+77 error Please try running this command again as root/Administrator.
+78 verbose exit [ -13, true ]
+79 verbose unbuild lib/node_modules/eslint
+80 verbose gentlyRm vacuuming /usr/local/dh/nodejs/lib/node_modules/eslint

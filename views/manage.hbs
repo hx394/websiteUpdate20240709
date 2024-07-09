@@ -1,0 +1,68 @@
+
+
+{{#if user}}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">许弘臻的小站</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/aboutme">About me</a></li>
+					<li><a href="/messageboard">Message board</a></li>
+					<li><a href="/add">Leave a message</a></li>
+					<li class="active"><a href="/manage">manage</a></li>
+					<li><a href="/logout">logout</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+	<h1>Welcome, {{user.username}}!</h1>
+{{/if}}
+
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+
+<h3>Manage space</h3>
+{{#each messages}}
+<div class='displayMessage3'>
+  <p>Name: {{name}} Time: {{createdAt}}</p>
+  <p>Email: {{email}}</p>
+  <p>Secret: {{secret}}</p>
+	{{#if display}}
+	<div class="red">
+  	<p>Display: {{display}}</p>
+	</div>
+	{{/if}}
+	{{#unless display}}
+	<div class="blue">
+  	<p>Display: {{display}}</p>
+	</div>
+	{{/unless}}
+  <p>Session: {{session_id}}</p>
+  <p>Message: {{text}}</p>
+  <form method="POST" action="/delete">
+    <input type=hidden name=stuff value="{{slug}}">
+  	<input type="submit" value="Delete">
+  </form>
+  {{#unless secret}}
+  <form method="POST" action="/display">
+    <input type=hidden name=stuff value="{{slug}}">
+    <input type="submit" value="display">
+  </form>
+  <form method="POST" action="/cancelDisplay">
+    <input type=hidden name=stuff value="{{slug}}">
+    <input type="submit" value="Cancel display">
+  </form>
+  {{/unless}}
+
+</div>
+{{/each}}

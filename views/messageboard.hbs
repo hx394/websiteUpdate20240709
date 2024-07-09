@@ -1,0 +1,76 @@
+
+{{#if user}}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">许弘臻的小站</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/aboutme">About me</a></li>
+					<li class="active"><a href="/messageboard">Message board</a></li>
+					<li><a href="/add">Leave a message</a></li>
+					<li><a href="/manage">manage</a></li>
+					<li><a href="/logout">logout</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+	<h1>Welcome, {{user.username}}!</h1>
+{{/if}}
+{{#unless user}}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">许弘臻的小站</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/aboutme">About me</a></li>
+					<li class="active"><a href="/messageboard">Message board</a></li>
+					<li><a href="/add">Leave a message</a></li>
+					<li><a href="/login">Manage login</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+{{/unless}}
+
+
+<h1>The Glorious Message Board</h1>
+
+<div>
+<p>Total messages: {{messageNum}}</p>
+<p>displayed messages:{{displayed}}</p>
+</div>
+{{#each messages}}
+<div class='displayMessage1'>
+  <p>Name: {{name}} Time: {{createdAt}}</p>
+  <p>Message: {{text}}</p>
+</div>
+{{/each}}
+
+<div class="container">
+
+  <div class="starter-template">
+<div class="jumbotron">
+    <h1>Advertisement</h1>
+    <p>If you have spare time, please leave a message. <span class="glyphicon glyphicon-hand-down"></span></p>
+    <p><a class="btn btn-primary btn-lg" href="/add" target="_blank" role="button">Yes I will</a></p>
+    </div>
+</div>
+</div>

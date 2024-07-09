@@ -1,0 +1,41 @@
+
+<h2>Register</h2>
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+<form method="POST" action="/register" name="register" onsubmit="return validateForm()">
+	<div>
+		<label for="username">Username:</label>
+		<input type="text" name="username" id="username" value="">
+	</div>
+	<div>
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" value="">
+	</div>
+	<div><input type="submit" value="Register"></div>
+</form>
+
+<script>
+function validateForm() {
+    const x = document.forms["register"]["username"].value;
+    if (x.length < 8 || x.length >20) {
+				const div=document.getElementById('username');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Username must be between 8 and 20 characters");
+        header.appendChild(content);
+				div.parentNode.appendChild(header);
+        return false;
+    }
+		const y = document.forms["register"]["password"].value;
+		if (y.length<8||y.length>20) {
+				const div=document.getElementById('password');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Password must be between 8 and 20 characters");
+				header.appendChild(content);
+				div.parentNode.appendChild(header);
+				return false;
+		}
+}
+</script>

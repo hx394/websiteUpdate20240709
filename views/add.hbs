@@ -1,0 +1,154 @@
+
+
+{{#if user}}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">许弘臻的小站</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/aboutme">About me</a></li>
+					<li><a href="/messageboard">Message board</a></li>
+					<li class="active"><a href="/add">Leave a message</a></li>
+					<li><a href="/manage">manage</a></li>
+					<li><a href="/logout">logout</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+	<h1>Welcome, {{user.username}}!</h1>
+{{/if}}
+{{#unless user}}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">许弘臻的小站</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/aboutme">About me</a></li>
+					<li><a href="/messageboard">Message board</a></li>
+					<li class="active"><a href="/add">Leave a message</a></li>
+					<li><a href="/login">Manage login</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+{{/unless}}
+
+<h2>Leave a new message</h2>
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+<form name="send_message" method="POST" action="" onsubmit="return validateForm()">
+	<div>
+		<label for="name">Your name:</label>
+		<input type="text" id="name" name="name" value="">
+	</div>
+	<div>
+		<label for="email">Your email(email won't be posted):</label>
+		<input type="email" id="email" name="email" value="">
+	</div>
+	<div>
+		<label for="content">Content:</label>
+		<textarea name="content" id="content" placeholder="Say something..."></textarea>
+	</div>
+  <div>
+    <p>Is this message a secret? Secret won't be posted on main page.</p>
+    <p><input type="radio" name="secret" value="false" checked='checked' />No
+    <input type="radio" name="secret" value="true" />Yes</p>
+  </div>
+	<input type="submit" value="Add">
+</form>
+
+
+
+<hr/>
+<h3>recent messages i left</h3>
+{{#if empty}}
+	<p>No recent messages</p>
+{{/if}}
+{{#each sessionOnlyMessages}}
+<div class='displayMessage2'>
+  <p>Name: {{name}} Time: {{createdAt}}</p>
+  <p>Content: {{text}}</p>
+  <p>Session id: {{session_id}}</p>
+</div>
+{{/each}}
+
+<script>
+function validateForm() {
+    const x = document.forms["send_message"]["name"].value;
+    if (x === "") {
+				const div=document.getElementById('name');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Name must be filled out");
+        header.appendChild(content);
+				div.parentNode.appendChild(header);
+        return false;
+    }
+		if (x.length > 15) {
+				const div=document.getElementById('name');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Name cannot be more than 15 characters");
+				header.appendChild(content);
+				div.parentNode.appendChild(header);
+				return false;
+		}
+		const y = document.forms["send_message"]["email"].value;
+		if (y === "") {
+				const div=document.getElementById('email');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Email must be filled out");
+				header.appendChild(content);
+				div.parentNode.appendChild(header);
+				return false;
+		}
+		if (y.length > 20) {
+				const div=document.getElementById('email');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Email cannot be more than 20 characters");
+				header.appendChild(content);
+				div.parentNode.appendChild(header);
+				return false;
+		}
+		const z = document.forms["send_message"]["content"].value;
+		if (z === "") {
+				const div=document.getElementById('content');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Content must be filled out");
+				header.appendChild(content);
+				div.parentNode.appendChild(header);
+				return false;
+		}
+		if (z.length > 300) {
+				const div=document.getElementById('content');
+				const header=document.createElement('h1');
+				header.setAttribute("class","error");
+				const content=document.createTextNode("Content length cannot exceed 300");
+				header.appendChild(content);
+				div.parentNode.appendChild(header);
+				return false;
+		}
+}
+</script>
