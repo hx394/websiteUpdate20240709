@@ -99,6 +99,10 @@ app.get('/aboutme',(req,res)=>{
 	res.render('aboutme');
 });
 
+app.get('/resume',(req,res)=>{
+	res.render('resume');
+});
+
 app.get('/messageboard', (req, res) => {
   Message.find({display:true,secret:false},(err,messages,count)=>{
 			Data.findOne({website_id:888},(err,data,count)=>{
